@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblemon_teampreview",
+  "version": "${version}",
+  "name": "Cobblemon Team Preview",
+  "description": "Right-click a trainer NPC to preview its Pokemon team before deciding whether to battle. Shows level, held item, ability, nature, IVs and EVs, and is fully configurable.",
+  "authors": [
+    "nightpoem"
+  ],
+  "license": "MIT",
+  "icon": "assets/cobblemon_teampreview/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.teampreview.TeamPreviewMod"
+    ],
+    "client": [
+      "com.teampreview.client.TeamPreviewClient"
+    ],
+    "modmenu": [
+      "com.teampreview.client.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "cobblemon_teampreview.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cobblemon": ">=1.8.1 <1.9",
+    "rctmod": ">=0.19.2-beta <0.20",
+    "rctapi": ">=0.16.1-beta <0.17"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "contact": {
+    "homepage": "https://github.com/nightpoem/cobblemon-teampreview",
+    "sources": "https://github.com/nightpoem/cobblemon-teampreview",
+    "issues": "https://github.com/nightpoem/cobblemon-teampreview/issues"
+  }
+}

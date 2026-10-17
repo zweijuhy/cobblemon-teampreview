@@ -1,0 +1,21 @@
+{
+  "category.cobblemon_teampreview": "队伍预览",
+  "key.cobblemon_teampreview.open_config": "打开队伍预览设置",
+
+  "gui.cobblemon_teampreview.preview.title": "训练家队伍",
+  "gui.cobblemon_teampreview.config.title": "队伍预览设置",
+  "gui.cobblemon_teampreview.battle": "继续战斗",
+  "gui.cobblemon_teampreview.cancel": "取消",
+  "gui.cobblemon_teampreview.ability": "特性",
+  "gui.cobblemon_teampreview.nature": "性格",
+  "gui.cobblemon_teampreview.ivs": "个体值",
+  "gui.cobblemon_teampreview.evs": "努力值",
+
+  "config.cobblemon_teampreview.enabled": "启用队伍预览",
+  "config.cobblemon_teampreview.blockAutoBattleOnLook": "禁止注视自动开战",
+  "config.cobblemon_teampreview.showIvs": "显示个体值",
+  "config.cobblemon_teampreview.showEvs": "显示努力值",
+  "config.cobblemon_teampreview.showHeldItem": "显示携带道具",
+  "config.cobblemon_teampreview.showAbility": "显示特性",
+  "config.cobblemon_teampreview.showNature": "显示性格"
+}

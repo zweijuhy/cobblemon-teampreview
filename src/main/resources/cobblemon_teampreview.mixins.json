@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.teampreview.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ForceIntoBattleGoalMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

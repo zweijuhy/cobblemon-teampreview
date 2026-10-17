@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+
+# Loom / dev environment
+run/
+remappedSrc/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,21 @@
+{
+  "category.cobblemon_teampreview": "Team Preview",
+  "key.cobblemon_teampreview.open_config": "Open Team Preview Config",
+
+  "gui.cobblemon_teampreview.preview.title": "Trainer Team",
+  "gui.cobblemon_teampreview.config.title": "Team Preview Settings",
+  "gui.cobblemon_teampreview.battle": "Continue Battle",
+  "gui.cobblemon_teampreview.cancel": "Cancel",
+  "gui.cobblemon_teampreview.ability": "Ability",
+  "gui.cobblemon_teampreview.nature": "Nature",
+  "gui.cobblemon_teampreview.ivs": "IVs",
+  "gui.cobblemon_teampreview.evs": "EVs",
+
+  "config.cobblemon_teampreview.enabled": "Enable Team Preview",
+  "config.cobblemon_teampreview.blockAutoBattleOnLook": "Block battle on sight",
+  "config.cobblemon_teampreview.showIvs": "Show IVs",
+  "config.cobblemon_teampreview.showEvs": "Show EVs",
+  "config.cobblemon_teampreview.showHeldItem": "Show held items",
+  "config.cobblemon_teampreview.showAbility": "Show abilities",
+  "config.cobblemon_teampreview.showNature": "Show natures"
+}

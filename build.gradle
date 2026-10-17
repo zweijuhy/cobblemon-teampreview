@@ -1,0 +1,66 @@
+plugins {
+    id 'fabric-loom' version '1.7.4'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    maven {
+        name = 'TerraformersMC'
+        url = 'https://maven.terraformersmc.com/releases/'
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Cobblemon and Radical Cobblemon Trainers are shipped by the target modpack and are
+    // not available on a reachable Maven repository, so they are consumed from local jars.
+    modImplementation files("../_deps/Cobblemon-fabric-1.8.1+1.21.1.jar")
+    modImplementation files("../_deps/rctapi-fabric-1.21.1-0.16.1-beta.jar")
+    modImplementation files("../_deps/rctmod-fabric-1.21.1-0.19.2-beta.jar")
+
+    // Compile-time only transitive dependencies of the local mod jars above.
+    modCompileOnly files("../_deps/architectury-13.0.8-fabric.jar")
+    modCompileOnly files("../_deps/fabric-language-kotlin-1.13.7+kotlin.2.2.21.jar")
+
+    // Optional Mod Menu integration (present in the target modpack).
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
